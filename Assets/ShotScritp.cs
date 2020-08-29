@@ -28,7 +28,7 @@ public class ShotScritp : MonoBehaviour
             AstroidScript astroidScript = collision.gameObject.GetComponent<AstroidScript>();
             astroidScript.hp -= 3;
             //폭발위치 보정
-            Vector3 editPos = new Vector3(-0.1f, 0, 0);
+            Vector3 editPos = new Vector3(0, 0, 0);
             //폭발 이펙트 
             Instantiate(shotEffect, transform.position + editPos, Quaternion.identity);
             //HP가 다되면 폭파 사라짐 
