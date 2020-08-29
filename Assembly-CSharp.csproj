@@ -43,6 +43,7 @@
      <Compile Include="Assets\bgScript.cs" />
      <Compile Include="Assets\AstroidScript.cs" />
      <Compile Include="Assets\DisappearScript.cs" />
+     <Compile Include="Assets\GameManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.1.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

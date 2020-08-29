@@ -27,6 +27,7 @@ public class ShotScritp : MonoBehaviour
         {
             AstroidScript astroidScript = collision.gameObject.GetComponent<AstroidScript>();
             astroidScript.hp -= 3;
+            Destroy(gameObject);
             //폭발위치 보정
             Vector3 editPos = new Vector3(0, 0, 0);
             //폭발 이펙트 
@@ -40,6 +41,7 @@ public class ShotScritp : MonoBehaviour
                 //운석 터지면 코인 등장 
                 Instantiate(coin, transform.position + randomPos, Quaternion.identity);
                 Destroy(collision.gameObject);
+                
             }
         }
     }
