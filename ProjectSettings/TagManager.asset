@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Undefined
+  - Background
+  - Astreroid
+  - Asteroid
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - PlayerShot
+  - Enemy
+  - Item
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3191376569
+    locked: 0
+  - name: PlayerShot
+    uniqueID: 3322316159
+    locked: 0
+  - name: Player
+    uniqueID: 1113473945
+    locked: 0
+  - name: Enemy
+    uniqueID: 426856059
+    locked: 0
+  - name: Item
+    uniqueID: 3737753301
+    locked: 0
