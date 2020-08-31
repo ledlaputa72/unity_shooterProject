@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.
+using UnityEngine.UI;
 
 public class CanvasScript : MonoBehaviour
 {
-    public Text
+    // Start is called before the first frame update
+    public Text myText;
     void Start()
     {
         print("Width"+ Screen.width);
@@ -17,6 +18,7 @@ public class CanvasScript : MonoBehaviour
         myText.GetComponent<RectTransform>().position = pos;
     }
 
+    // Update is called once per frame
     void Update()
     {
         
