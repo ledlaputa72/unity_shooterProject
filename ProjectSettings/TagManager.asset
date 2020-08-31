@@ -8,6 +8,9 @@ TagManager:
   - Background
   - Astreroid
   - Asteroid
+  - Enemy
+  - Item
+  - EnemyShot
   layers:
   - Default
   - TransparentFX
@@ -19,10 +22,10 @@ TagManager:
   - 
   - Player
   - PlayerShot
-  - Enemy
+  - Astroid
   - Item
-  - 
-  - 
+  - Enemy
+  - EnemyShot
   - 
   - 
   - 
@@ -51,12 +54,18 @@ TagManager:
   - name: Player
     uniqueID: 1113473945
     locked: 0
-  - name: Enemy
-    uniqueID: 426856059
+  - name: Astroid
+    uniqueID: 519734727
     locked: 0
   - name: PlayerShot
     uniqueID: 3322316159
     locked: 0
   - name: Item
     uniqueID: 3737753301
+    locked: 0
+  - name: Enemy
+    uniqueID: 426856059
+    locked: 0
+  - name: EnemyShot
+    uniqueID: 4129287881
     locked: 0

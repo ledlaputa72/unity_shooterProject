@@ -619,8 +619,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astroid: {fileID: 2973564634760598451, guid: e51eb75663b5c294abb9d547e875f034, type: 3}
+  enemies:
+  - {fileID: 1067307149323083086, guid: 07cb4e9f2b90c42cab6fb1361296b947, type: 3}
+  - {fileID: 5153463543597071674, guid: fb10a341a74f348c5a75267746e14e2d, type: 3}
+  - {fileID: 1676298639424550567, guid: ab06d31f539844d90ae2ccd6b2d65aef, type: 3}
   time: 0
   maxTime: 2
+  coin: 0
 --- !u!4 &1296492248
 Transform:
   m_ObjectHideFlags: 0
@@ -927,6 +932,7 @@ GameObject:
   - component: {fileID: 1602587450}
   - component: {fileID: 1602587449}
   - component: {fileID: 1602587452}
+  - component: {fileID: 1602587453}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -944,7 +950,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.048811734, y: -0.096221566}
@@ -1039,10 +1045,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157b7ef04cebc8b4b88e19cda707c978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 3977629707556774701, guid: c34c360d008794e208078c5620013150, type: 3}
   shot: {fileID: 1119385294573457921, guid: e5d0ad552b9a8114abe99a52a11093e0, type: 3}
   speed: 7
   shotMax: 0.2
   shotDelay: 0
+--- !u!50 &1602587453
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602587448}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2135343508
 GameObject:
   m_ObjectHideFlags: 0

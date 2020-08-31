@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject explosion;
     public GameObject shot;
     public float speed = 5;
     Vector3 min, max;
@@ -42,6 +43,26 @@ public class PlayerScript : MonoBehaviour
         Move();
         PlayerShot();
         
+    }
+
+    //플레이어가 코인 오브젝트와 충돌     
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.tag == "Item"){
+            CoinScript coinScript = collision.gameObject.GetComponent<CoinScript>();
+            //게임 오브젝트의 인스턴트에서 코인을 누적 
+            GameManager.instance.coin += coinScript.coinSize;
+            print("Coin: " + GameManager.instance.coin);
+            //코인을 파괴한다. 
+            Destroy(collision.gameObject);
+        }
+        //플레이어에 운석/적 등이 충돌할때 캐릭터 파괴 
+        else if(collision.gameObject.tag == "Asteroid" || 
+        collision.gameObject.tag == "Enemy" ||
+        collision.gameObject.tag == "EnemyShot" )  {
+            Destroy(collision.gameObject); //충돌한 물체 파괴 
+            Destroy(gameObject); //자신 파괴
+            Instantiate(explosion, transform.position, Quaternion.identity); //폭파 이펙트 생성 
+        }
     }
 
 
