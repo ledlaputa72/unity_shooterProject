@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.
 
 public class CanvasScript : MonoBehaviour
 {
-    public Text myText;
+    public Text
     void Start()
     {
         print("Width"+ Screen.width);
