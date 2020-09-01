@@ -47,6 +47,7 @@
      <Compile Include="Assets\AstroidScript.cs" />
      <Compile Include="Assets\EnemyShotScript.cs" />
      <Compile Include="Assets\DisappearScript.cs" />
+     <Compile Include="Assets\Blue Cartoon UI\Demo_Assets\scripts\GUI_Demo.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.1.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

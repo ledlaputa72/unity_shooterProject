@@ -21,6 +21,6 @@ public class CanvasScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        myText.GetComponent<RectTransform>().position = Input.mousePosition;   
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text coinText;
     public static GameManager instance; //다른 스크립트에서 게임 매니저에 접근 가능하게 만들어 주는 객체 변수 생성. 
     public GameObject astroid;
     public List<GameObject> enemies;
@@ -14,7 +16,8 @@ public class GameManager : MonoBehaviour
         instance = this; //자기 자신을 대입하여 다른 곳에서 게임매니저 객체에 접근이 가능
     }    void Start()
     {
-        
+        coin = 0;
+        coinText.text = coin.ToString();
     }
 
     void Update()
@@ -35,5 +38,9 @@ public class GameManager : MonoBehaviour
             
             time = 0;
         }
+    }
+
+    public void PauseAction(){
+        print("PuaseAction");
     }
 }

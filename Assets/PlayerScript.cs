@@ -52,6 +52,7 @@ public class PlayerScript : MonoBehaviour
             //게임 오브젝트의 인스턴트에서 코인을 누적 
             GameManager.instance.coin += coinScript.coinSize;
             print("Coin: " + GameManager.instance.coin);
+            GameManager.instance.coinText.text = GameManager.instance.coin.ToString();
             //코인을 파괴한다. 
             Destroy(collision.gameObject);
         }
