@@ -12,11 +12,12 @@ public class PlayerScript : MonoBehaviour
     Vector2 chrSize;
     void Start()
     {
-       
-        min = new Vector3(-8, -4.5f, 0);
+        //해상도에 따른 화면 위치를 받기 위해서 사용 
+        min = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
+        //min = new Vector3(-8, -4.5f, 0);
        //print(min);
-        //max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
-        max = new Vector3(8, 4.5f, 0);
+        max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
+        //max = new Vector3(8, 4.5f, 0);
        //print(max);
 
         colSize = GetComponent<BoxCollider2D>().size;
@@ -34,8 +35,8 @@ public class PlayerScript : MonoBehaviour
         float newX = transform.position.x;
         float newY = transform.position.y;
 
-        //Clamp를 사용하여 비행기 화면밖으로 안나가게 적용 
-        newX = Mathf.Clamp(newX, min.x + chrSize.x, max.x - chrSize.x);
+        //Clamp를 사용하여 비행기 화면밖으로 안나가게 적용 (해상도에 따라 적용)
+        newX = Mathf.Clamp(newX, min.x + chrSize.x, max.x - chrSize.x - 0.2f);
         newY = Mathf.Clamp(newY, min.y + chrSize.y, max.y - chrSize.y);
         transform.position = new Vector3(newX, newY, transform.position.z);
 
